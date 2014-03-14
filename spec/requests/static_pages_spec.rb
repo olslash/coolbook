@@ -1,12 +1,22 @@
 require 'spec_helper'
 
 describe "StaticPages" do
+
+  let(:base_title) { "Ruby on Rails Tutorial Sample App" }
+
   describe "GET /static_pages" do
     it "should have the correct title" do
       StaticPagesController.action_methods.each do |meth|
+        #homepage doesn't have a special title
         path = 'static_pages_'+meth.to_s+'_path'
+        #p "before, page is: #{page.title}"
         visit send(path)
-        expect(page).to have_title(meth.to_s.capitalize)
+        if meth == "home" #homepage only has the base title
+          expect(page).not_to have_title(meth.to_s.capitalize)
+        else
+          expect(page).to have_title("#{base_title} | #{meth.to_s.capitalize}")
+        #p "after visit, page is: #{page}"
+        end
       end
     end
     describe "Home page" do
@@ -44,6 +54,12 @@ describe "StaticPages" do
         expect(page).to have_title("Ruby on Rails Tutorial Sample App | About")
       end
 =end
+    end
+    describe "Contact page" do
+      it "should have the content 'Contact Us'" do
+        visit static_pages_contact_path
+        expect(page).to have_content('Contact Us')
+      end
     end
 
   end
