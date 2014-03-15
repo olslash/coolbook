@@ -27,6 +27,8 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     atomic (1.1.15)
+    bootstrap-sass (3.1.1.0)
+      sass (~> 3.2)
     builder (3.1.4)
     capybara (2.2.1)
       mime-types (>= 1.16)
@@ -104,10 +106,11 @@ GEM
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
     rubyzip (1.1.0)
-    sass (3.3.2)
-    sass-rails (4.0.1)
+    sass (3.2.15)
+    sass-rails (4.0.2)
       railties (>= 4.0.0, < 5.0)
-      sass (>= 3.1.10)
+      sass (~> 3.2.0)
+      sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0.0)
     sdoc (0.4.0)
       json (~> 1.8)
@@ -148,6 +151,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass
   capybara
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
@@ -156,7 +160,7 @@ DEPENDENCIES
   rails (= 4.0.3)
   rails_12factor
   rspec-rails
-  sass-rails (~> 4.0.0)
+  sass-rails
   sdoc
   selenium-webdriver
   sqlite3
