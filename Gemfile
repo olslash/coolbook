@@ -5,7 +5,7 @@ gem 'rails', '4.0.3'
 gem 'bootstrap-sass'
 
 # Use SCSS for stylesheets
-gem 'sass-rails'
+gem 'sass-rails', '~> 4.0.2'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -49,6 +49,7 @@ end
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
+ # gem 'nyan-cat-formatter'
 end
 
 group :production do
