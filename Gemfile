@@ -49,7 +49,9 @@ end
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
- # gem 'nyan-cat-formatter'
+  #gem 'nyan-cat-formatter'
+  gem 'factory_girl_rails'
+  gem 'simplecov'
 end
 
 group :production do
