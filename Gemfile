@@ -51,7 +51,7 @@ group :test do
   gem 'capybara'
   #gem 'nyan-cat-formatter'
   gem 'factory_girl_rails'
-  gem 'simplecov'
+  #gem 'simplecov'
 end
 
 group :production do
