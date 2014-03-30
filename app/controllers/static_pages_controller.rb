@@ -12,7 +12,4 @@ class StaticPagesController < ApplicationController
   def contact
     
   end
-  def IZIP
-
-  end
 end
